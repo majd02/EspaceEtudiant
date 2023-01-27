@@ -1,0 +1,95 @@
+<div class="preloader">
+    <div class="lds-ripple">
+      <div class="lds-pos"></div>
+      <div class="lds-pos"></div>
+    </div>
+  </div>
+  <!-- ============================================================== -->
+  <!-- Main wrapper - style you can find in pages.scss -->
+  <!-- ============================================================== -->
+  <div
+    id="main-wrapper"
+    data-layout="vertical"
+    data-navbarbg="skin5"
+    data-sidebartype="full"
+    data-sidebar-position="absolute"
+    data-header-position="absolute"
+    data-boxed-layout="full"
+  >
+  
+<app-back></app-back>
+<div class="page-wrapper">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="page-breadcrumb">
+      <div class="row">
+        <div class="col-12 d-flex no-block align-items-center">
+          <h4 class="page-title">Tables</h4>
+          <div class="ms-auto text-end">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Library
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+<h3>Update planing</h3>
+<div style="width: 400px;">
+  <form >
+  
+
+    <div class="form-group">
+      <label for="name">Location</label>
+      <input type="date" class="form-control" id="location" required [(ngModel)]="planing.datedebut" name="datedebut">
+    </div>
+
+    <div class="form-group">
+        <label for="name">description</label>
+        <input type="text" class="form-control" id="description" required [(ngModel)]="planing.duree" name="description">
+      </div>
+     
+      <div class="form-item">
+        <!-- FORM INPUT -->
+        <div class=" input-group input-group-sm mb-3">
+          <select  class=" py-2 px-4 bg-white text-black text-3xl shadow-md flex border-2 border-gray-200 
+          font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-10 focus:ring-blue-400 
+          focus:ring-opacity-75" 
+          (change)="onSelect2($event)">
+              <option value="0"> salle</option>
+              <option *ngFor="let salle of salles "
+              [value]="salle.id"  >{{salle.numero}}</option>
+          </select>
+      </div>
+      <div class="form-item">
+        <!-- FORM INPUT -->
+        <div class=" input-group input-group-sm mb-3">
+          <select  class=" py-2 px-4 bg-white text-black text-3xl shadow-md flex border-2 border-gray-200 
+          font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-10 focus:ring-blue-400 
+          focus:ring-opacity-75" 
+          (change)="onSelect($event)">
+              <option value="0"> matiere</option>
+              <option *ngFor="let matiere of matieres "
+              [value]="matiere.id"  >{{matiere.nom}}</option>
+          </select>
+      </div>
+        <!-- /FORM INPUT -->
+      </div>
+     
+        <!-- /FORM INPUT -->
+      </div>
+    
+      <button (click)="updateevent()" type="button"
+      
+      class="btn btn-primary m-t-15 waves-effect">Add</button>
+  </form>
+</div>
+</div>
+</div> 

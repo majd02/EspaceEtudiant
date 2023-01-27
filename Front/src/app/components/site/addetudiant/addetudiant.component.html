@@ -1,0 +1,168 @@
+<div class="preloader">
+    <div class="lds-ripple">
+      <div class="lds-pos"></div>
+      <div class="lds-pos"></div>
+    </div>
+  </div>
+  <!-- ============================================================== -->
+  <!-- Main wrapper - style you can find in pages.scss -->
+  <!-- ============================================================== -->
+  <div
+    id="main-wrapper"
+    data-layout="vertical"
+    data-navbarbg="skin5"
+    data-sidebartype="full"
+    data-sidebar-position="absolute"
+    data-header-position="absolute"
+    data-boxed-layout="full"
+  >
+  
+  <app-back></app-back>
+  <div class="container-fluid">
+    <!-- ============================================================== -->
+    <!-- Start Page Content -->
+    <!-- ============================================================== -->
+    <div class="row">
+      <div class="col-12">
+        
+        <div class="card">
+          <div class="card-body">
+              <h5 class="card-title">Basic Datatable</h5>
+              
+              <div class="table-responsive">
+                
+
+  <!-- Page content -->
+  <div class="container-fluid mt--7">
+    <!-- Table -->
+     
+   <div align="center">
+    <div class="form-box login-register-form-element">
+        <!-- FORM BOX DECORATION -->
+        <img class="form-box-decoration"  alt="rocket">
+        <!-- /FORM BOX DECORATION -->
+    
+        <!-- FORM BOX TITLE -->
+        <h2 class="form-box-title">creer etudiant compte!</h2>
+        <!-- /FORM BOX TITLE -->
+    
+        <!-- FORM -->
+        <form class="form">
+          <!-- FORM ROW -->
+         
+          <!-- /FORM ROW -->
+    
+          <!-- FORM ROW -->
+          <div class="form-row">
+            <!-- FORM ITEM -->
+            <div class="form-item">
+              <!-- FORM INPUT -->
+              <div class="form-input">
+                <label for="register-username">Username</label>
+                <input type="text" id="register-username"  [(ngModel)]="user.email" name="register_username">
+              </div>
+              <!-- /FORM INPUT -->
+            </div>
+            <!-- /FORM ITEM -->
+          </div>
+          <div class="form-row">
+            <!-- FORM ITEM -->
+            <div class="form-item">
+              <!-- FORM INPUT -->
+              <div class="form-input">
+                <label for="register-username">firstname</label>
+                <input type="text" id="register-username"  [(ngModel)]="user.firstname" name="register_username">
+              </div>
+              <!-- /FORM INPUT -->
+            </div>
+            <!-- /FORM ITEM -->
+          </div>
+          <div class="form-row">
+            <!-- FORM ITEM -->
+            <div class="form-item">
+              <!-- FORM INPUT -->
+              <div class="form-input">
+                <label for="register-username">lastname</label>
+                <input type="text" id="register-username"  [(ngModel)]="user.lastname" name="register_username">
+              </div>
+              <!-- /FORM INPUT -->
+            </div>
+            <!-- /FORM ITEM -->
+          </div>
+          
+          <div class="form-row">
+            <!-- FORM ITEM -->
+            <div class="form-item">
+              <!-- FORM INPUT -->
+              <div class=" input-group input-group-sm mb-3">
+                <select  class=" py-2 px-4 bg-white text-black text-3xl shadow-md flex border-2 border-gray-200 
+                font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-10 focus:ring-blue-400 
+                focus:ring-opacity-75" 
+                (change)="onSelect($event)"> 
+                    <option [value]="specialite.id" *ngFor="let specialite of specialites "
+                     >{{specialite.nom}}</option>
+                </select>
+            </div>
+              <!-- /FORM INPUT -->
+            </div>
+            <!-- /FORM ITEM -->
+          </div>
+          <!-- /FORM ROW -->
+    
+          <!-- FORM ROW -->
+          <div class="form-row">
+            <!-- FORM ITEM -->
+            <div class="form-item">
+              <!-- FORM INPUT -->
+              <div class="form-input">
+                <label for="register-password">Password</label>
+                <input type="password"  [(ngModel)]="user.password" id="register-password" name="register_password">
+              </div>
+              <!-- /FORM INPUT -->
+            </div>
+            <!-- /FORM ITEM -->
+          </div>
+          <!-- /FORM ROW -->
+    
+          <!-- FORM ROW -->
+         
+          <!-- /FORM ROW -->
+    
+          <!-- FORM ROW -->
+          <div class="form-row">
+            <!-- FORM ITEM -->
+            <div class="form-item">
+              <!-- CHECKBOX WRAP -->
+              <div class="checkbox-wrap">
+                <input type="checkbox" id="register-newsletter" name="register_newsletter" checked>
+                <!-- CHECKBOX BOX -->
+                
+                <!-- /CHECKBOX BOX -->
+                </div>
+              <!-- /CHECKBOX WRAP -->
+            </div>
+            <!-- /FORM ITEM -->
+          </div>
+          <!-- /FORM ROW -->
+    
+          <!-- FORM ROW -->
+          <div class="form-row">
+            <!-- FORM ITEM -->
+            <div class="form-item">
+              <!-- BUTTON -->
+              <button class="button medium primary" (click)="adduser()">Register Now!</button>
+              <!-- /BUTTON -->
+            </div>
+            <!-- /FORM ITEM -->
+          </div>
+          <!-- /FORM ROW -->
+        </form>
+        <!-- /FORM -->
+    
+        <!-- FORM TEXT -->
+          <!-- /FORM TEXT -->
+      </div>
+        </div> 
+    <!-- Dark table -->
+    
+  </div>

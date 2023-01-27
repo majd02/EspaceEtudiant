@@ -1,0 +1,68 @@
+<div class="preloader">
+    <div class="lds-ripple">
+      <div class="lds-pos"></div>
+      <div class="lds-pos"></div>
+    </div>
+  </div>
+  <!-- ============================================================== -->
+  <!-- Main wrapper - style you can find in pages.scss -->
+  <!-- ============================================================== -->
+  <div
+    id="main-wrapper"
+    data-layout="vertical"
+    data-navbarbg="skin5"
+    data-sidebartype="full"
+    data-sidebar-position="absolute"
+    data-header-position="absolute"
+    data-boxed-layout="full"
+  >
+  
+  <app-back></app-back>
+  <div class="page-wrapper" align="center" >
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="page-breadcrumb">
+      <div class="row">
+        <div class="col-12 d-flex no-block align-items-center">
+          <h4 class="page-title">matiere</h4>
+          <div class="ms-auto text-end">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Library
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+  <h3>modifier salle</h3>
+  <div style="width: 400px;">
+  <form >
+  
+  
+    <div class="form-group">
+      <label for="name">nom</label>
+      <input type="text" class="form-control" id="location" required [(ngModel)]="salle.numero" name="numero">
+    </div>
+  
+    <div class="form-group">
+        <label for="name">coef</label>
+        <input type="text" class="form-control" id="description" required [(ngModel)]="salle.status" name="coef">
+      </div>
+     
+   
+  
+    
+      <button (click)="updateevent()" type="button"
+      
+      class="btn btn-primary m-t-15 waves-effect">Add</button>
+  </form>
+  </div>
+  </div>
+  </div> 

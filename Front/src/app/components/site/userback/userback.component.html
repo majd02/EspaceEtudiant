@@ -1,0 +1,120 @@
+<div class="preloader">
+    <div class="lds-ripple">
+      <div class="lds-pos"></div>
+      <div class="lds-pos"></div>
+    </div>
+  </div>
+  <!-- ============================================================== -->
+  <!-- Main wrapper - style you can find in pages.scss -->
+  <!-- ============================================================== -->
+  <div
+    id="main-wrapper"
+    data-layout="vertical"
+    data-navbarbg="skin5"
+    data-sidebartype="full"
+    data-sidebar-position="absolute"
+    data-header-position="absolute"
+    data-boxed-layout="full"
+  >
+  
+<app-back></app-back>
+
+<div class="page-wrapper">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="page-breadcrumb">
+      <div class="row">
+        <div class="col-12 d-flex no-block align-items-center">
+          <h4 class="page-title">Tables</h4>
+          <div class="ms-auto text-end">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Library
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
+    <div class="container-fluid">
+      <!-- ============================================================== -->
+      <!-- Start Page Content -->
+      <!-- ============================================================== -->
+      <div class="row">
+        <div class="col-12">
+          
+          <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Basic Datatable</h5>
+                
+                <div class="table-responsive">
+                  <style>
+                    .card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+                    </style>
+                    <div class="card"  *ngFor="let appuser of appusers ">
+                        <img src="assets/{{appuser.image}}" alt="Avatar" style="height: 100px; width: 100px">
+                        <div class="container">
+                          username<h4><b>{{appuser.firstname}}</b></h4> 
+                          email<h4><b>{{appuser.email}}</b></h4> 
+                          <h4>points<b>{{appuser.points}}</b></h4> 
+                        </div>
+                        <button (click)="admin(appuser.id)" type="button" class="btn
+                                btn-prima ry">upgrade</button>
+                      </div>
+                
+               <button  type="button" class="btnbtn-primary "><a href="http://localhost:8089/SpringMVCMajd/export">csv</a></button>
+
+               
+                <div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ============================================================== -->
+      <!-- End PAge Content -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- Right sidebar -->
+      <!-- ============================================================== -->
+      <!-- .right-sidebar -->
+      <!-- ============================================================== -->
+      <!-- End Right sidebar -->
+      <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Container fluid  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- footer -->
+    <!-- ============================================================== -->
+   
+    <!-- ============================================================== -->
+    <!-- End footer -->
+    <!-- ============================================================== -->
